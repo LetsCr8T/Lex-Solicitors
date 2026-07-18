@@ -8,17 +8,16 @@ import { MobileNav } from "@/components/layout/MobileNav";
 import { navItems, navSectionIds } from "@/data/nav";
 import { useScrolled } from "@/hooks/useScrolled";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
+import { CONSULTATION_MESSAGE } from "@/lib/constants";
 import { cn, whatsappLink } from "@/lib/utils";
 
 // Prefilled WhatsApp consultation link, built once.
-const consultationHref = whatsappLink(
-  "Hello Lex Haven Solicitors, I'd like to book a consultation.",
-);
+const consultationHref = whatsappLink(CONSULTATION_MESSAGE);
 
 /**
- * Sticky primary navigation. Transparent at the top of the page, transitioning
- * to a solid blurred surface once scrolled. (When a dark hero lands in a later
- * phase, revisit the top-state text color.)
+ * Primary navigation (inside the fixed header). Transparent with light text
+ * over the ink hero at the top of the page, transitioning to a solid blurred
+ * light surface with dark text once scrolled. The logo swaps variant to match.
  */
 export function Navbar() {
   const scrolled = useScrolled(24);
@@ -28,14 +27,14 @@ export function Navbar() {
     <nav
       aria-label="Primary"
       className={cn(
-        "sticky top-0 z-50 transition-colors duration-300",
+        "transition-colors duration-300",
         scrolled
           ? "border-b border-border bg-background/85 text-foreground shadow-sm backdrop-blur-md"
-          : "border-b border-transparent bg-transparent text-ink",
+          : "border-b border-transparent bg-transparent text-primary-foreground",
       )}
     >
       <Container className="flex h-16 items-center justify-between gap-4 lg:h-20">
-        <Logo priority />
+        <Logo priority variant={scrolled ? "default" : "light"} />
         <DesktopNav items={navItems} activeId={activeId} />
         <div className="flex items-center gap-2">
           <CTAButton

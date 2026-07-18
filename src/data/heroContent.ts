@@ -1,0 +1,22 @@
+import type { HeroContent } from "@/types";
+
+/**
+ * Hero headline options. `primary` is what renders; the alternates are kept so
+ * they can be previewed and swapped in without touching the component.
+ */
+export const heroHeadlines = {
+  primary: "Navigate complexity with confidence.",
+  alt1: "Sound counsel for the decisions that shape your business.",
+  alt2: "Where expertise meets integrity.",
+} as const;
+
+export const heroContent: HeroContent = {
+  eyebrow: "Lex Haven Solicitors",
+  headline: heroHeadlines.primary,
+  headlineAlternates: [heroHeadlines.alt1, heroHeadlines.alt2],
+  subhead:
+    "A multidisciplinary advisory firm delivering legal advisory, regulatory compliance, corporate governance and tax consulting — practical, results-driven counsel that supports sustainable business growth.",
+  primaryCta: { label: "Book a Consultation", type: "whatsapp" },
+  secondaryCta: { label: "Explore Our Services", href: "#practice-areas" },
+  meta: ["Expertise", "Integrity", "Results"],
+};

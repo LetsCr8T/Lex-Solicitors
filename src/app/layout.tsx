@@ -74,7 +74,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
       <body className="flex min-h-dvh flex-col antialiased">
-        <header>
+        <header className="fixed inset-x-0 top-0 z-50">
           <TopBar />
           <Navbar />
         </header>

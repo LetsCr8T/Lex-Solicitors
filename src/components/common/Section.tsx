@@ -31,7 +31,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "scroll-mt-24 py-16 sm:py-20 lg:py-24",
+        "scroll-mt-32 py-16 sm:py-20 lg:py-24",
         sectionVariants[variant],
         className,
       )}

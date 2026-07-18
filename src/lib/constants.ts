@@ -12,6 +12,10 @@ export const CONTACT_LINKS = {
   whatsapp: `https://wa.me/${siteConfig.whatsapp}`,
 } as const;
 
+/** Prefilled message for the "Book a Consultation" WhatsApp CTA (shared). */
+export const CONSULTATION_MESSAGE =
+  "Hello Lex Haven Solicitors, I'd like to book a consultation.";
+
 /**
  * Stable anchor IDs for the landing-page sections. Used for in-page
  * navigation and scroll-spy once sections are built.

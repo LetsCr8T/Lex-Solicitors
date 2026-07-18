@@ -28,6 +28,26 @@ export interface Value {
   description: string;
 }
 
+/** A hero call-to-action. `type: "whatsapp"` builds the wa.me link; else `href`. */
+export interface HeroCta {
+  label: string;
+  type?: "whatsapp";
+  href?: string;
+}
+
+/** Hero section copy. */
+export interface HeroContent {
+  eyebrow: string;
+  headline: string;
+  /** Alternate headlines kept for preview / selection. */
+  headlineAlternates: string[];
+  subhead: string;
+  primaryCta: HeroCta;
+  secondaryCta: HeroCta;
+  /** Short inline meta items (e.g. the tagline split into three). */
+  meta: string[];
+}
+
 /** A frequently asked question entry. */
 export interface Faq {
   question: string;
