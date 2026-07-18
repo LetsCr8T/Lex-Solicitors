@@ -35,6 +35,36 @@ export interface HeroCta {
   href?: string;
 }
 
+/** A labelled fact in the About definition list. */
+export interface AboutFact {
+  label: string;
+  value: string;
+}
+
+/** About section copy. */
+export interface AboutContent {
+  eyebrow: string;
+  title: string;
+  paragraphs: string[];
+  facts: AboutFact[];
+  cta: HeroCta;
+}
+
+/** A single "Why Choose Us" differentiator card. */
+export interface Differentiator {
+  id: string;
+  icon: "layers" | "briefcase" | "shield-check" | "award";
+  title: string;
+  description: string;
+}
+
+/** Why Choose Us section copy. */
+export interface WhyChooseUsContent {
+  eyebrow: string;
+  title: string;
+  items: Differentiator[];
+}
+
 /** Hero section copy. */
 export interface HeroContent {
   eyebrow: string;
