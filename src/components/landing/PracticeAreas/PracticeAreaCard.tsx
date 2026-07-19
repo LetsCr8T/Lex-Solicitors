@@ -1,5 +1,6 @@
 import {
   ArrowRight,
+  Building2,
   Calculator,
   Check,
   ClipboardCheck,
@@ -9,6 +10,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { CONTACT_PATH } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 import type { Service } from "@/types";
 
 const iconMap: Record<Service["icon"], LucideIcon> = {
@@ -16,20 +18,32 @@ const iconMap: Record<Service["icon"], LucideIcon> = {
   "clipboard-check": ClipboardCheck,
   landmark: Landmark,
   calculator: Calculator,
+  "building-2": Building2,
 };
 
 export interface PracticeAreaCardProps {
   service: Service;
-  /** 1-based position, shown as a subtle 01–04 index. */
+  /** 1-based position, shown as a subtle 01–05 index. */
   index: number;
+  /** Extra classes for the card root (e.g. responsive width in the grid). */
+  className?: string;
 }
 
 /** Presentational practice-area card: icon, index, title, description, list, link. */
-export function PracticeAreaCard({ service, index }: PracticeAreaCardProps) {
+export function PracticeAreaCard({
+  service,
+  index,
+  className,
+}: PracticeAreaCardProps) {
   const Icon = iconMap[service.icon];
 
   return (
-    <article className="flex flex-col gap-5 rounded-2xl border border-border bg-background p-8 transition-colors hover:border-accent/40">
+    <article
+      className={cn(
+        "flex flex-col gap-5 rounded-2xl border border-border bg-background p-8 transition-colors hover:border-accent/40",
+        className,
+      )}
+    >
       <div className="flex items-center justify-between">
         <span className="inline-flex size-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
           <Icon aria-hidden className="size-6" />

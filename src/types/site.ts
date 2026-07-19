@@ -22,7 +22,7 @@ export interface Service {
   description: string;
   /** Representative capabilities within the practice area. */
   capabilities: string[];
-  icon: "file-text" | "clipboard-check" | "landmark" | "calculator";
+  icon: "file-text" | "clipboard-check" | "landmark" | "calculator" | "building-2";
 }
 
 /** A core firm value (e.g. Integrity, Diligence). */

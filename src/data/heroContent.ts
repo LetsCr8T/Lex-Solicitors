@@ -16,7 +16,7 @@ export const heroContent: HeroContent = {
   headline: heroHeadlines.primary,
   headlineAlternates: [heroHeadlines.alt1, heroHeadlines.alt2],
   subhead:
-    "A multidisciplinary advisory firm delivering legal advisory, regulatory compliance, corporate governance and tax consulting — practical, results-driven counsel that supports sustainable business growth.",
+    "A multidisciplinary advisory firm delivering practical, results-driven counsel across legal, regulatory, governance, tax and real estate matters — support built to help your business grow sustainably.",
   primaryCta: { label: "Book a Consultation", href: CONTACT_PATH },
   secondaryCta: { label: "Explore Our Services", href: "#practice-areas" },
   meta: ["Expertise", "Integrity", "Results"],

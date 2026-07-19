@@ -3,7 +3,7 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 import { PracticeAreaCard } from "@/components/landing/PracticeAreas/PracticeAreaCard";
 import { services } from "@/data/services";
 
-/** Practice Areas: four data-driven cards across the firm's disciplines. */
+/** Practice Areas: data-driven cards across the firm's disciplines. */
 export function PracticeAreas() {
   return (
     <Section id="practice-areas" variant="default">
@@ -13,15 +13,18 @@ export function PracticeAreas() {
           align="center"
           eyebrow="Our Practice Areas"
           title="Advisory across the disciplines your business depends on."
-          subtitle="Four connected disciplines, delivered by one joined-up team — so your legal, regulatory, governance and tax needs are handled in concert, not in silos."
+          subtitle="Connected disciplines, delivered by one joined-up team — so your legal, regulatory, governance, tax and real estate needs are handled in concert, not in silos."
           className="mx-auto max-w-2xl"
         />
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {/* flex-wrap + justify-center keeps the trailing (5th) card centered,
+            with no lonely orphan, while cards keep their roomy two-up width. */}
+        <div className="flex flex-col gap-6 md:flex-row md:flex-wrap md:justify-center">
           {services.map((service, i) => (
             <PracticeAreaCard
               key={service.id}
               service={service}
               index={i + 1}
+              className="md:w-[calc(50%_-_0.75rem)]"
             />
           ))}
         </div>

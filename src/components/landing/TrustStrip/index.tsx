@@ -2,7 +2,7 @@ import { Container } from "@/components/common/Container";
 import { services } from "@/data/services";
 
 /**
- * Slim credibility band beneath the hero: the four practice-area titles at a
+ * Slim credibility band beneath the hero: the firm's practice-area titles at a
  * glance. Light band (muted) creates a clean seam against the ink hero.
  * Presentational; data-driven from `services`.
  */
@@ -20,7 +20,7 @@ export function TrustStrip() {
           Our practice areas
         </p>
 
-        <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:flex sm:flex-wrap sm:items-center sm:gap-x-8 lg:flex-1 lg:justify-between">
+        <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:flex sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-3 lg:flex-1">
           {services.map((service, i) => (
             <li key={service.id} className="flex items-center gap-6 sm:gap-8">
               {i > 0 ? (

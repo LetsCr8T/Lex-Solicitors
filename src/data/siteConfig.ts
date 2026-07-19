@@ -8,9 +8,9 @@ export const siteConfig: SiteConfig = {
   name: "Lex Haven Solicitors",
   tagline: "Expertise. Integrity. Results.",
   description:
-    "Lex Haven Solicitors is a Lagos law firm for legal advisory, regulatory compliance, corporate governance and tax consulting — practical, principled counsel.",
+    "Lex Haven Solicitors is a Lagos law firm for legal advisory, regulatory compliance, corporate governance, tax consulting and real estate advisory — practical, principled counsel.",
   shortAbout:
-    "A multidisciplinary advisory firm delivering legal advisory, regulatory compliance, corporate governance and tax consulting to support sustainable business growth.",
+    "A multidisciplinary advisory firm delivering legal advisory, regulatory compliance, corporate governance, tax consulting and real estate advisory to support sustainable business growth.",
   // Prefers the production URL from the environment (set on Vercel); falls back
   // to the canonical domain so metadata/sitemap/canonical stay correct locally.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://lexhavensolicitors.com",

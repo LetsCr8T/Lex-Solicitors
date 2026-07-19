@@ -6,7 +6,7 @@ export const faqs: Faq[] = [
     id: "services",
     question: "What services does Lex Haven Solicitors offer?",
     answer:
-      "We are a multidisciplinary advisory firm providing legal advisory, regulatory compliance, corporate governance advisory, and tax consulting. We help businesses stay compliant, strengthen their governance, and make commercially sound decisions that support sustainable growth.",
+      "We are a multidisciplinary advisory firm providing legal advisory, regulatory compliance, corporate governance advisory, tax consulting, and real estate advisory. We help businesses stay compliant, strengthen their governance, and make commercially sound decisions that support sustainable growth.",
   },
   {
     id: "clients",
@@ -36,7 +36,7 @@ export const faqs: Faq[] = [
     id: "difference",
     question: "What makes Lex Haven different from other firms?",
     answer:
-      "We bring legal, regulatory, governance and tax expertise together under one roof, so you get joined-up advice rather than fragmented opinions. We're commercially minded, uphold the highest standards of integrity, and measure our success by the lasting value we create for clients.",
+      "We bring legal, regulatory, governance, tax and real estate expertise together under one roof, so you get joined-up advice rather than fragmented opinions. We're commercially minded, uphold the highest standards of integrity, and measure our success by the lasting value we create for clients.",
   },
   {
     id: "regulatory",
