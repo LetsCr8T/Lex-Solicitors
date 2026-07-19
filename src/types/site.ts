@@ -64,6 +64,5 @@ export interface SiteConfig {
   phoneDisplay: string;
   address: string;
   hours: string;
-  established: number;
   social: SocialLinks;
 }

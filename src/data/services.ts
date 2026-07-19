@@ -71,14 +71,14 @@ export const services: Service[] = [
     slug: "real-estate-advisory",
     title: "Real Estate Advisory",
     summary:
-      "Practical legal and commercial guidance across property transactions, titles and real estate investment.",
+      "Legal and strategic guidance across property transactions, development and investment.",
     description:
-      "We advise investors, developers and businesses on the legal and commercial dimensions of real estate — from acquisitions, disposals and leasing to title perfection and development. We help clients transact with confidence and safeguard their interests at every stage.",
+      "Providing legal and strategic guidance and support services on property acquisitions, disposals, leasing, development, and real estate investments.",
     capabilities: [
-      "Property acquisitions, sales & leasing",
-      "Title verification & due diligence",
-      "Title perfection, consent & registration",
-      "Real estate development & investment advisory",
+      "Property acquisitions & disposals",
+      "Leasing & occupancy",
+      "Real estate development",
+      "Real estate investment advisory",
     ],
     icon: "building-2",
   },

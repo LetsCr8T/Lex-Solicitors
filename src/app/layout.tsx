@@ -67,8 +67,10 @@ export const metadata: Metadata = {
   },
 };
 
-// Brand navy for the mobile browser chrome.
+// Responsive viewport + brand navy for the mobile browser chrome.
 export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: "#0e2038",
 };
 

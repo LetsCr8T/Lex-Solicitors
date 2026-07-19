@@ -16,14 +16,19 @@ export function HeroActions({
   return (
     <div className="mt-4 flex flex-col gap-8">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-        <CTAButton href={primaryCta.href} variant="gold" size="lg">
+        <CTAButton
+          href={primaryCta.href}
+          variant="gold"
+          size="lg"
+          className="w-full sm:w-auto"
+        >
           {primaryCta.label}
         </CTAButton>
         <CTAButton
           href={secondaryCta.href}
           variant="outline"
           size="lg"
-          className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+          className="w-full border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground sm:w-auto"
         >
           {secondaryCta.label}
         </CTAButton>

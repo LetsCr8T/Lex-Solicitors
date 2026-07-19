@@ -19,7 +19,7 @@ export function ValueCard({ item, index }: ValueCardProps) {
       <h3 className="font-display text-2xl font-semibold text-primary-foreground">
         {item.title}
       </h3>
-      <p className="max-w-xs text-sm leading-relaxed text-primary-foreground/80 sm:text-base">
+      <p className="max-w-xs text-base leading-relaxed text-primary-foreground/80">
         {item.description}
       </p>
     </div>

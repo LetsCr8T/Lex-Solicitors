@@ -2,13 +2,14 @@ import {
   ArrowRight,
   Building2,
   Calculator,
-  Check,
   ClipboardCheck,
   FileText,
   Landmark,
   type LucideIcon,
 } from "lucide-react";
 import Link from "next/link";
+import { Disclosure } from "@/components/common/Disclosure";
+import { CapabilityList } from "@/components/landing/PracticeAreas/CapabilityList";
 import { CONTACT_PATH } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import type { Service } from "@/types";
@@ -40,7 +41,7 @@ export function PracticeAreaCard({
   return (
     <article
       className={cn(
-        "flex flex-col gap-5 rounded-2xl border border-border bg-background p-8 transition-colors hover:border-accent/40",
+        "flex flex-col gap-5 rounded-2xl border border-border bg-background p-6 transition-colors hover:border-accent/40 sm:p-8",
         className,
       )}
     >
@@ -59,21 +60,24 @@ export function PracticeAreaCard({
       <h3 className="font-display text-2xl font-semibold text-ink">
         {service.title}
       </h3>
-      <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+      <p className="text-base leading-relaxed text-muted-foreground">
         {service.description}
       </p>
 
-      <ul className="flex flex-col gap-2.5">
-        {service.capabilities.map((capability) => (
-          <li
-            key={capability}
-            className="flex items-start gap-2.5 text-sm text-body"
-          >
-            <Check aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" />
-            <span>{capability}</span>
-          </li>
-        ))}
-      </ul>
+      {/* Desktop: capabilities always visible. Mobile: collapsed behind an
+          accessible toggle so the card stays scannable (same list, one source). */}
+      <div className="hidden md:block">
+        <CapabilityList capabilities={service.capabilities} />
+      </div>
+      <div className="md:hidden">
+        <Disclosure
+          label="View services"
+          triggerClassName="flex w-full items-center justify-between gap-2 border-t border-border py-3 text-sm font-semibold text-ink"
+          panelClassName="pt-1 pb-2"
+        >
+          <CapabilityList capabilities={service.capabilities} />
+        </Disclosure>
+      </div>
 
       <Link
         href={`${CONTACT_PATH}?area=${service.slug}`}

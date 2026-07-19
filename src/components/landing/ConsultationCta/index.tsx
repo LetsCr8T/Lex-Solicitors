@@ -28,15 +28,20 @@ export function ConsultationCta() {
             title={title}
             subtitle={subtitle}
           />
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <CTAButton href={primaryCta.href} variant="gold" size="lg">
+          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <CTAButton
+              href={primaryCta.href}
+              variant="gold"
+              size="lg"
+              className="w-full sm:w-auto"
+            >
               {primaryCta.label}
             </CTAButton>
             <CTAButton
               href={secondaryCta.href}
               variant="outline"
               size="lg"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+              className="w-full border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground sm:w-auto"
             >
               {secondaryCta.label}
             </CTAButton>

@@ -72,14 +72,13 @@
 
 @theme {
   /*
-    Body type tuning for Poppins. Poppins is geometric and renders larger/
-    rounder than Inter, so the base body size is stepped down a touch and given
-    comfortable leading — applied once here at the token level, not per
-    component. Heading sizes (text-xl and up, all font-display / Cormorant) are
-    intentionally left untouched.
+    Body type for Poppins. Base body text is 16px — the mobile-first floor that
+    keeps copy readable on phones and prevents iOS from zooming on input focus.
+    Comfortable leading is set once here at the token level, not per component.
+    Heading sizes (text-xl and up, all font-display / Cormorant) are untouched.
   */
-  --text-base: 0.9375rem; /* 15px (was 16px) */
-  --text-base--line-height: 1.65;
+  --text-base: 1rem; /* 16px — min body size (readability + no iOS input zoom) */
+  --text-base--line-height: 1.6;
 }
 
 :root {

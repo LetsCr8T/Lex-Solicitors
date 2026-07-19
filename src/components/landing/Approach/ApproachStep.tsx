@@ -38,7 +38,7 @@ export function ApproachStep({ step, isLast }: ApproachStepProps) {
         <h3 className="font-display text-xl font-semibold text-ink">
           {step.title}
         </h3>
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+        <p className="mt-2 text-base leading-relaxed text-muted-foreground">
           {step.description}
         </p>
       </div>

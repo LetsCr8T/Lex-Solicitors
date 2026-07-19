@@ -124,7 +124,7 @@ export function ConsultationForm({ defaultArea }: ConsultationFormProps) {
         variant="gold"
         size="lg"
         disabled={submitting}
-        className="self-start"
+        className="w-full sm:w-auto sm:self-start"
       >
         {submitting ? "Sending…" : "Send request"}
       </CTAButton>

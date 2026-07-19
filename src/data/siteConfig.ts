@@ -30,7 +30,6 @@ export const siteConfig: SiteConfig = {
   phoneDisplay: "0806 667 2405",
   address: "15 Ebun Otti Estate, Mende, Maryland, Lagos",
   hours: "Mon – Fri, 8:00am – 5:00pm",
-  established: 2025,
   // No social profiles provided yet.
   social: {},
 };

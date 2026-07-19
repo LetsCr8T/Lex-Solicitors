@@ -20,8 +20,10 @@ export interface FormFieldProps {
   options?: FormFieldOption[];
 }
 
+// text-base (16px) is deliberate: smaller triggers iOS zoom-on-focus. py-2.5 +
+// 16px keeps the control height ≥44px for comfortable tapping.
 const control =
-  "w-full rounded-md border bg-background px-3.5 py-2.5 text-sm text-ink transition-colors placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none";
+  "w-full rounded-md border bg-background px-3.5 py-2.5 text-base text-ink transition-colors placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none";
 
 /** Labelled input / textarea / select with an inline error slot (a11y-wired). */
 export function FormField({
