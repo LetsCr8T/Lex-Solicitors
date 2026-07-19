@@ -9,12 +9,6 @@ export const faqs: Faq[] = [
       "We are a multidisciplinary advisory firm providing legal advisory, regulatory compliance, corporate governance advisory, tax consulting, and real estate advisory. We help businesses stay compliant, strengthen their governance, and make commercially sound decisions that support sustainable growth.",
   },
   {
-    id: "clients",
-    question: "What types of clients do you work with?",
-    answer:
-      "We work with businesses across sectors — from startups establishing their foundations to established organizations navigating regulatory, governance and tax matters. If your business faces legal or regulatory complexity, we can help you approach it with confidence.",
-  },
-  {
     id: "book-consultation",
     question: "How do I book a consultation?",
     answer:
@@ -37,18 +31,6 @@ export const faqs: Faq[] = [
     question: "What makes Lex Haven different from other firms?",
     answer:
       "We bring legal, regulatory, governance, tax and real estate expertise together under one roof, so you get joined-up advice rather than fragmented opinions. We're commercially minded, uphold the highest standards of integrity, and measure our success by the lasting value we create for clients.",
-  },
-  {
-    id: "regulatory",
-    question: "Do you help with regulatory approvals and compliance?",
-    answer:
-      "Yes. We help businesses obtain the licences, permits and approvals they need, and keep them aligned with statutory and regulatory obligations — including compliance reviews, policies and liaison with the relevant authorities.",
-  },
-  {
-    id: "tax",
-    question: "Can you advise on tax planning and compliance?",
-    answer:
-      "Yes. Our tax consulting covers strategic tax planning and efficient structuring, ongoing compliance and filings, and advisory support to help you meet your obligations while optimizing tax efficiency.",
   },
 ];
 
