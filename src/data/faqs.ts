@@ -18,7 +18,7 @@ export const faqs: Faq[] = [
     id: "book-consultation",
     question: "How do I book a consultation?",
     answer:
-      "The quickest way is to message us on WhatsApp using any of the 'Book a Consultation' buttons on this page, or email us at contact-us@lexhavensolicitors.com. Tell us briefly what you need and we'll arrange a time to talk.",
+      "Use any 'Book a Consultation' button on the site to open our contact page, where you can send us a message, call us, or email contact-us@lexhavensolicitors.com. Tell us briefly what you need and we'll arrange a time to talk.",
   },
   {
     id: "location",

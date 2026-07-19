@@ -3,8 +3,6 @@ import { Section } from "@/components/common/Section";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { ValueCard } from "@/components/landing/Values/ValueCard";
 import { valuesContent } from "@/data/approachContent";
-import { CONSULTATION_MESSAGE } from "@/lib/constants";
-import { whatsappLink } from "@/lib/utils";
 
 /**
  * Our Values on a deep-navy band — the emotional close before Contact. The
@@ -28,12 +26,7 @@ export function Values() {
             <ValueCard key={item.id} item={item} index={i + 1} />
           ))}
         </div>
-        <CTAButton
-          href={whatsappLink(CONSULTATION_MESSAGE)}
-          variant="gold"
-          size="lg"
-          aria-label={`${valuesContent.cta.label} on WhatsApp`}
-        >
+        <CTAButton href={valuesContent.cta.href} variant="gold" size="lg">
           {valuesContent.cta.label}
         </CTAButton>
       </div>

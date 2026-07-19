@@ -4,9 +4,8 @@ import { Section } from "@/components/common/Section";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { FaqAccordion } from "@/components/landing/Faq/FaqAccordion";
 import { faqContactPrompt, faqs } from "@/data/faqs";
-import { CONSULTATION_MESSAGE, CONTACT_LINKS } from "@/lib/constants";
+import { CONTACT_LINKS, CONTACT_PATH } from "@/lib/constants";
 import { buildFaqJsonLd } from "@/lib/structuredData";
-import { whatsappLink } from "@/lib/utils";
 
 /** FAQ section: accessible accordion, contact fallback, and FAQPage JSON-LD. */
 export function Faq() {
@@ -24,12 +23,8 @@ export function Faq() {
         <div className="flex flex-col items-center gap-4 text-center">
           <p className="text-muted-foreground">{faqContactPrompt}</p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <CTAButton
-              href={whatsappLink(CONSULTATION_MESSAGE)}
-              variant="primary"
-              size="md"
-            >
-              Message us on WhatsApp
+            <CTAButton href={CONTACT_PATH} variant="primary" size="md">
+              Book a Consultation
             </CTAButton>
             <CTAButton href={CONTACT_LINKS.email} variant="outline" size="md">
               Email us

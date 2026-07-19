@@ -1,4 +1,5 @@
 import type { HeroContent } from "@/types";
+import { CONTACT_PATH } from "@/lib/constants";
 
 /**
  * Hero headline options. `primary` is what renders; the alternates are kept so
@@ -16,7 +17,7 @@ export const heroContent: HeroContent = {
   headlineAlternates: [heroHeadlines.alt1, heroHeadlines.alt2],
   subhead:
     "A multidisciplinary advisory firm delivering legal advisory, regulatory compliance, corporate governance and tax consulting — practical, results-driven counsel that supports sustainable business growth.",
-  primaryCta: { label: "Book a Consultation", type: "whatsapp" },
+  primaryCta: { label: "Book a Consultation", href: CONTACT_PATH },
   secondaryCta: { label: "Explore Our Services", href: "#practice-areas" },
   meta: ["Expertise", "Integrity", "Results"],
 };

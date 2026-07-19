@@ -1,5 +1,6 @@
 import type { AboutContent, WhyChooseUsContent } from "@/types";
 import { siteConfig } from "@/data/siteConfig";
+import { CONTACT_PATH } from "@/lib/constants";
 
 export const aboutContent: AboutContent = {
   eyebrow: "About the Firm",
@@ -15,7 +16,7 @@ export const aboutContent: AboutContent = {
     { label: "Focus", value: "Advisory-led, commercially minded" },
     { label: "Hours", value: siteConfig.hours },
   ],
-  cta: { label: "Discuss your needs", type: "whatsapp" },
+  cta: { label: "Discuss your needs", href: CONTACT_PATH },
 };
 
 export const whyChooseUsContent: WhyChooseUsContent = {

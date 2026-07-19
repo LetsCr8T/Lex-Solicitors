@@ -2,11 +2,10 @@
  * Landing-section content types (copy-as-data in `src/data`).
  */
 
-/** A call-to-action. `type` selects a channel (wa.me / mailto); else use `href`. */
+/** A call-to-action: a label and the destination it links to. */
 export interface HeroCta {
   label: string;
-  type?: "whatsapp" | "email";
-  href?: string;
+  href: string;
 }
 
 /** Hero section copy. */
@@ -92,10 +91,10 @@ export interface ConsultationCtaContent {
   secondaryCta: HeroCta;
 }
 
-/** A single contact channel (WhatsApp, phone, email, address, hours). */
+/** A single contact channel (phone, email, address, hours). */
 export interface ContactChannel {
   id: string;
-  icon: "whatsapp" | "phone" | "mail" | "map-pin" | "clock";
+  icon: "phone" | "mail" | "map-pin" | "clock";
   label: string;
   value: string;
   /** Omitted for plain-text channels (e.g. working hours). */
@@ -110,4 +109,6 @@ export interface ContactContent {
   intro: string;
   channels: ContactChannel[];
   mapQuery: string;
+  /** Heading block above the consultation form. */
+  form: { eyebrow: string; title: string; subtitle: string };
 }

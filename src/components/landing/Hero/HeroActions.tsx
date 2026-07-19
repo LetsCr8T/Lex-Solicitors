@@ -1,6 +1,4 @@
 import { CTAButton } from "@/components/common/CTAButton";
-import { CONSULTATION_MESSAGE } from "@/lib/constants";
-import { whatsappLink } from "@/lib/utils";
 import type { HeroCta } from "@/types";
 
 export interface HeroActionsProps {
@@ -15,26 +13,14 @@ export function HeroActions({
   secondaryCta,
   meta,
 }: HeroActionsProps) {
-  const isWhatsapp = primaryCta.type === "whatsapp";
-  const primaryHref = isWhatsapp
-    ? whatsappLink(CONSULTATION_MESSAGE)
-    : (primaryCta.href ?? "#");
-
   return (
     <div className="mt-4 flex flex-col gap-8">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-        <CTAButton
-          href={primaryHref}
-          variant="gold"
-          size="lg"
-          aria-label={
-            isWhatsapp ? "Book a consultation on WhatsApp" : undefined
-          }
-        >
+        <CTAButton href={primaryCta.href} variant="gold" size="lg">
           {primaryCta.label}
         </CTAButton>
         <CTAButton
-          href={secondaryCta.href ?? "#"}
+          href={secondaryCta.href}
           variant="outline"
           size="lg"
           className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"

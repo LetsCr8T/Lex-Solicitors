@@ -31,6 +31,19 @@ fallbacks apply); set them in production.
 | Variable               | Purpose                                                                                                                      |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | `NEXT_PUBLIC_SITE_URL` | Production site URL. Drives `metadataBase`, canonical, OG, sitemap, JSON-LD. Falls back to `https://lexhavensolicitors.com`. |
+| `ZOHO_*`, `CONTACT_*`  | Consultation-form email (Zoho SMTP). See below — **not wired yet**.                                                          |
+
+## Contact form email — not wired yet
+
+The `/contact` consultation form POSTs to `app/api/contact/route.ts`, which
+validates the input (zod + honeypot) and calls `sendConsultationEmail()` in
+`src/lib/email.ts`. **Email is not actually sent yet:** without the `ZOHO_*` /
+`CONTACT_*` env vars (and the transport implemented in `src/lib/email.ts`),
+submissions are validated and **logged server-side but not emailed** — the flow
+is demoable, and the form shows a success state. To go live, set the env vars
+and implement the transport in the single marked block in `src/lib/email.ts`
+(the route and form don't change). **Do not share the live form with real users
+until email is wired.**
 
 ## Scripts
 

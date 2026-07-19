@@ -17,7 +17,7 @@ export function TopBar() {
         </span>
         <a href={CONTACT_LINKS.phone} className={linkClass}>
           <Phone aria-hidden className="size-3.5 text-accent" />
-          <span>{siteConfig.phone}</span>
+          <span>{siteConfig.phoneDisplay}</span>
         </a>
         <a href={CONTACT_LINKS.email} className={linkClass}>
           <Mail aria-hidden className="size-3.5 text-accent" />

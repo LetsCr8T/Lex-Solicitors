@@ -8,13 +8,11 @@ import { siteConfig } from "@/data/siteConfig";
 /** Pre-built contact URLs derived from siteConfig. */
 export const CONTACT_LINKS = {
   email: `mailto:${siteConfig.email}`,
-  phone: `tel:+${siteConfig.whatsapp}`,
-  whatsapp: `https://wa.me/${siteConfig.whatsapp}`,
+  phone: `tel:${siteConfig.phoneHref}`,
 } as const;
 
-/** Prefilled message for the "Book a Consultation" WhatsApp CTA (shared). */
-export const CONSULTATION_MESSAGE =
-  "Hello Lex Haven Solicitors, I'd like to book a consultation.";
+/** Dedicated contact route — the destination for every consultation CTA. */
+export const CONTACT_PATH = "/contact";
 
 /**
  * Stable anchor IDs for the landing-page sections. Used for in-page

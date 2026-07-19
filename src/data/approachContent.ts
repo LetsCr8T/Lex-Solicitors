@@ -1,4 +1,5 @@
 import type { ApproachContent, ValuesContent } from "@/types";
+import { CONTACT_PATH } from "@/lib/constants";
 
 export const approachContent: ApproachContent = {
   eyebrow: "Our Approach",
@@ -60,5 +61,5 @@ export const valuesContent: ValuesContent = {
         "We are committed to delivering measurable outcomes that create lasting value for our clients.",
     },
   ],
-  cta: { label: "Start the conversation", type: "whatsapp" },
+  cta: { label: "Start the conversation", href: CONTACT_PATH },
 };

@@ -4,8 +4,6 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 import { AboutFacts } from "@/components/landing/About/AboutFacts";
 import { AboutVisual } from "@/components/landing/About/AboutVisual";
 import { aboutContent } from "@/data/aboutContent";
-import { CONSULTATION_MESSAGE } from "@/lib/constants";
-import { whatsappLink } from "@/lib/utils";
 
 /** About section: firm overview, truthful facts, and a consultation CTA. */
 export function About() {
@@ -25,10 +23,9 @@ export function About() {
           </div>
           <AboutFacts facts={aboutContent.facts} />
           <CTAButton
-            href={whatsappLink(CONSULTATION_MESSAGE)}
+            href={aboutContent.cta.href}
             variant="primary"
             size="lg"
-            aria-label={`${aboutContent.cta.label} on WhatsApp`}
             className="self-start"
           >
             {aboutContent.cta.label}

@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { navHref } from "@/data/nav";
 import { cn } from "@/lib/utils";
 import type { NavItem } from "@/types";
 
@@ -6,12 +8,12 @@ export interface NavLinkProps {
   active?: boolean;
 }
 
-/** Desktop nav anchor with animated underline + active (scroll-spy) state. */
+/** Desktop nav link with animated underline + active state. Works cross-route. */
 export function NavLink({ item, active = false }: NavLinkProps) {
   return (
-    <a
-      href={item.href}
-      aria-current={active ? "true" : undefined}
+    <Link
+      href={navHref(item)}
+      aria-current={active ? "page" : undefined}
       className={cn(
         "relative rounded-sm px-3 py-2 text-sm font-medium transition-colors hover:text-accent focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none",
         active ? "text-accent" : "text-current",
@@ -25,6 +27,6 @@ export function NavLink({ item, active = false }: NavLinkProps) {
           active ? "scale-x-100" : "scale-x-0",
         )}
       />
-    </a>
+    </Link>
   );
 }

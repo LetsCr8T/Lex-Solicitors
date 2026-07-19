@@ -1,8 +1,9 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
 import { Container } from "@/components/common/Container";
 import { Logo } from "@/components/common/Logo";
 import { FooterColumn } from "@/components/layout/Footer/FooterColumn";
-import { navItems } from "@/data/nav";
+import { navHref, navItems } from "@/data/nav";
 import { services } from "@/data/services";
 import { siteConfig } from "@/data/siteConfig";
 import { CONTACT_LINKS } from "@/lib/constants";
@@ -29,9 +30,9 @@ export function Footer() {
           <ul className="flex flex-col gap-3">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className={linkClass}>
+                <Link href={navHref(item)} className={linkClass}>
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -41,9 +42,9 @@ export function Footer() {
           <ul className="flex flex-col gap-3">
             {services.map((service) => (
               <li key={service.id}>
-                <a href="#practice-areas" className={linkClass}>
+                <Link href="/#practice-areas" className={linkClass}>
                   {service.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -63,7 +64,7 @@ export function Footer() {
               className={cn(linkClass, "flex items-center gap-2.5")}
             >
               <Phone aria-hidden className="size-4 shrink-0 text-accent" />
-              <span>{siteConfig.phone}</span>
+              <span>{siteConfig.phoneDisplay}</span>
             </a>
             <a
               href={CONTACT_LINKS.email}

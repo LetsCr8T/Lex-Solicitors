@@ -4,10 +4,8 @@ import { PillarMotif } from "@/components/common/PillarMotif";
 import { Section } from "@/components/common/Section";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { consultationCtaContent } from "@/data/contactContent";
-import { CONSULTATION_MESSAGE, CONTACT_LINKS } from "@/lib/constants";
-import { whatsappLink } from "@/lib/utils";
 
-/** Primary conversion band: confident ink section with WhatsApp + email CTAs. */
+/** Primary conversion band: confident ink section routing to the contact page. */
 export function ConsultationCta() {
   const { eyebrow, title, subtitle, primaryCta, secondaryCta } =
     consultationCtaContent;
@@ -31,16 +29,11 @@ export function ConsultationCta() {
             subtitle={subtitle}
           />
           <div className="flex flex-col gap-3 sm:flex-row">
-            <CTAButton
-              href={whatsappLink(CONSULTATION_MESSAGE)}
-              variant="gold"
-              size="lg"
-              aria-label={`${primaryCta.label} on WhatsApp`}
-            >
+            <CTAButton href={primaryCta.href} variant="gold" size="lg">
               {primaryCta.label}
             </CTAButton>
             <CTAButton
-              href={CONTACT_LINKS.email}
+              href={secondaryCta.href}
               variant="outline"
               size="lg"
               className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"

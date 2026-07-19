@@ -7,7 +7,8 @@ import {
   Landmark,
   type LucideIcon,
 } from "lucide-react";
-import { whatsappMessageFor } from "@/lib/utils";
+import Link from "next/link";
+import { CONTACT_PATH } from "@/lib/constants";
 import type { Service } from "@/types";
 
 const iconMap: Record<Service["icon"], LucideIcon> = {
@@ -60,11 +61,8 @@ export function PracticeAreaCard({ service, index }: PracticeAreaCardProps) {
         ))}
       </ul>
 
-      <a
-        href={whatsappMessageFor(service.title)}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`Discuss ${service.title} on WhatsApp`}
+      <Link
+        href={`${CONTACT_PATH}?area=${service.slug}`}
         className="group/cta mt-auto inline-flex items-center gap-1.5 self-start rounded-sm pt-1 text-sm font-semibold text-ink underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none"
       >
         <span>Discuss {service.title}</span>
@@ -72,7 +70,7 @@ export function PracticeAreaCard({ service, index }: PracticeAreaCardProps) {
           aria-hidden
           className="size-4 shrink-0 text-accent transition-transform group-hover/cta:translate-x-0.5"
         />
-      </a>
+      </Link>
     </article>
   );
 }

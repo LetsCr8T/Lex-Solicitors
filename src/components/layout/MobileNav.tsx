@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu } from "lucide-react";
+import Link from "next/link";
 import { ctaVariants } from "@/components/common/CTAButton";
 import { Logo } from "@/components/common/Logo";
 import {
@@ -11,12 +12,13 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { navItems } from "@/data/nav";
+import { isNavItemActive, navHref, navItems } from "@/data/nav";
+import { CONTACT_PATH } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export interface MobileNavProps {
   activeId: string | null;
-  consultationHref: string;
+  pathname: string;
 }
 
 /**
@@ -24,7 +26,7 @@ export interface MobileNavProps {
  * trap, Esc/overlay close, scroll lock, and focus restore; links close on
  * click; animations respect prefers-reduced-motion (global rule).
  */
-export function MobileNav({ activeId, consultationHref }: MobileNavProps) {
+export function MobileNav({ activeId, pathname }: MobileNavProps) {
   return (
     <Sheet>
       <SheetTrigger
@@ -44,37 +46,35 @@ export function MobileNav({ activeId, consultationHref }: MobileNavProps) {
         <nav aria-label="Mobile" className="flex flex-col p-5">
           <ul className="flex flex-col gap-1">
             {navItems.map((item) => {
-              const active = activeId === item.href.replace(/^#/, "");
+              const active = isNavItemActive(item, pathname, activeId);
               return (
                 <li key={item.href}>
                   <SheetClose asChild>
-                    <a
-                      href={item.href}
-                      aria-current={active ? "true" : undefined}
+                    <Link
+                      href={navHref(item)}
+                      aria-current={active ? "page" : undefined}
                       className={cn(
                         "block rounded-md px-3 py-3 text-base font-medium transition-colors hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none",
                         active ? "text-accent" : "text-foreground",
                       )}
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   </SheetClose>
                 </li>
               );
             })}
           </ul>
           <SheetClose asChild>
-            <a
-              href={consultationHref}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href={CONTACT_PATH}
               className={cn(
                 ctaVariants({ variant: "gold", size: "md" }),
                 "mt-6 w-full",
               )}
             >
               Book a Consultation
-            </a>
+            </Link>
           </SheetClose>
         </nav>
       </SheetContent>

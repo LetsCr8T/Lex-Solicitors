@@ -2,12 +2,13 @@
  * Core firm / site data-model types (content-as-data in `src/data`).
  */
 
-/** A single navigation entry (top bar, navbar, footer, mobile nav). */
+/** A single navigation entry (navbar, footer, mobile nav). */
 export interface NavItem {
   label: string;
+  /** `anchor` → in-page section (`href` is the section id); `route` → a path. */
+  type: "anchor" | "route";
+  /** Section id for anchors (e.g. "about"), or a path for routes (e.g. "/contact"). */
   href: string;
-  /** Optional nested links for dropdown / grouped menus. */
-  children?: NavItem[];
 }
 
 /** A practice area / legal service offered by the firm. */
@@ -57,8 +58,10 @@ export interface SiteConfig {
   ogImage: string;
   keywords: string[];
   email: string;
-  phone: string;
-  whatsapp: string;
+  /** E.164 number for the tel: href (e.g. "+2348066672405"). */
+  phoneHref: string;
+  /** Human-readable number for display (e.g. "0806 667 2405"). */
+  phoneDisplay: string;
   address: string;
   hours: string;
   established: number;

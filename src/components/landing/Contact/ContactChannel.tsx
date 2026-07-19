@@ -1,15 +1,7 @@
-import {
-  Clock,
-  Mail,
-  MapPin,
-  MessageCircle,
-  Phone,
-  type LucideIcon,
-} from "lucide-react";
+import { Clock, Mail, MapPin, Phone, type LucideIcon } from "lucide-react";
 import type { ContactChannel as ContactChannelData } from "@/types";
 
 const iconMap: Record<ContactChannelData["icon"], LucideIcon> = {
-  whatsapp: MessageCircle,
   phone: Phone,
   mail: Mail,
   "map-pin": MapPin,
@@ -26,8 +18,8 @@ export interface ContactChannelProps {
 /**
  * A single contact channel: decorative icon, label, and linked (or plain)
  * value. Linked values are named by `label + value` (aria-labelledby) so the
- * accessible name includes the visible value (WCAG 2.5.3) and stays distinct
- * (e.g. "WhatsApp 08066672405" vs "Phone 08066672405").
+ * accessible name includes the visible value (WCAG 2.5.3), e.g.
+ * "Phone 0806 667 2405".
  */
 export function ContactChannel({ channel }: ContactChannelProps) {
   const Icon = iconMap[channel.icon];

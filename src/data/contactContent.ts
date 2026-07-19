@@ -1,7 +1,7 @@
 import type { ConsultationCtaContent, ContactContent } from "@/types";
 import { siteConfig } from "@/data/siteConfig";
-import { CONSULTATION_MESSAGE, CONTACT_LINKS } from "@/lib/constants";
-import { mapsDirectionsUrl, whatsappLink } from "@/lib/utils";
+import { CONTACT_LINKS, CONTACT_PATH } from "@/lib/constants";
+import { mapsDirectionsUrl } from "@/lib/utils";
 
 const mapQuery = `${siteConfig.name}, ${siteConfig.address}`;
 
@@ -10,29 +10,21 @@ export const consultationCtaContent: ConsultationCtaContent = {
   title: "Let's talk about what your business needs.",
   subtitle:
     "Book a consultation and get clear, practical counsel from a team that treats your objectives as its own.",
-  primaryCta: { label: "Book a Consultation", type: "whatsapp" },
-  secondaryCta: { label: "Email Us", type: "email" },
+  primaryCta: { label: "Book a Consultation", href: CONTACT_PATH },
+  secondaryCta: { label: "Email Us", href: CONTACT_LINKS.email },
 };
 
 export const contactContent: ContactContent = {
   eyebrow: "Contact Us",
   title: "Reach the firm.",
   intro:
-    "Send us a message or call during working hours — we'll respond promptly and arrange a time to discuss your matter.",
+    "Call us during working hours, send an email, or request a consultation below — we respond promptly and will arrange a time to discuss your matter.",
   channels: [
-    {
-      id: "whatsapp",
-      icon: "whatsapp",
-      label: "WhatsApp",
-      value: siteConfig.phone,
-      href: whatsappLink(CONSULTATION_MESSAGE),
-      external: true,
-    },
     {
       id: "phone",
       icon: "phone",
       label: "Phone",
-      value: siteConfig.phone,
+      value: siteConfig.phoneDisplay,
       href: CONTACT_LINKS.phone,
     },
     {
@@ -58,4 +50,10 @@ export const contactContent: ContactContent = {
     },
   ],
   mapQuery,
+  form: {
+    eyebrow: "Request a consultation",
+    title: "Tell us about your matter.",
+    subtitle:
+      "Share a few details and we'll get back to you to arrange a time to talk.",
+  },
 };
