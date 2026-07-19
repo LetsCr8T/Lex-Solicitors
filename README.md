@@ -42,14 +42,22 @@ fallbacks apply); set them in production.
 | `npm run lint`         | Run ESLint                                           |
 | `npm run format`       | Format with Prettier                                 |
 | `npm run format:check` | Check formatting without writing                     |
-| `npm run gen:assets`   | Regenerate OG image + favicons from the brand mark   |
+| `npm run gen:logo`     | Trim + recolour the client logo into web variants    |
+| `npm run gen:favicons` | Rebuild the favicon / app-icon set from the logo     |
+| `npm run gen:assets`   | Regenerate the Open Graph image                      |
 
 ## Brand assets
 
-The Open Graph image, favicons, apple-touch-icon, and PWA icons are generated
-from inline SVG by `scripts/generate-assets.mjs` (`npm run gen:assets`, uses the
-dev-only `@resvg/resvg-js`). Re-run it if the brand mark or tagline changes.
-Replace the placeholder `LH` monogram with the final logo when available.
+The client logo lives at `public/images/lex-logo.png`. Dev-only scripts derive
+the web assets from it (via `sharp` / `@resvg/resvg-js`); re-run them if the
+logo changes:
+
+- **`npm run gen:logo`** → trimmed `lex-logo-light.png` (for dark backgrounds)
+  and a navy `lex-logo-dark.png` (for light backgrounds), used by the header,
+  footer and 404.
+- **`npm run gen:favicons`** → `favicon.ico`, `icon.png`, `apple-icon.png`, and
+  the PWA icons, built from the logo's monogram on a navy chip.
+- **`npm run gen:assets`** → the 1200×630 Open Graph card (`og-image.png`).
 
 ## Deploying to Vercel
 

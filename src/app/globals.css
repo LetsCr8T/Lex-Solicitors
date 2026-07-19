@@ -15,7 +15,7 @@
 
 @theme inline {
   /* Fonts (variables supplied by next/font on <html>) */
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-poppins);
   --font-display: var(--font-cormorant);
   --font-heading: var(--font-cormorant);
 
@@ -68,6 +68,18 @@
   --radius-xl: calc(var(--radius) * 1.4);
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
+}
+
+@theme {
+  /*
+    Body type tuning for Poppins. Poppins is geometric and renders larger/
+    rounder than Inter, so the base body size is stepped down a touch and given
+    comfortable leading — applied once here at the token level, not per
+    component. Heading sizes (text-xl and up, all font-display / Cormorant) are
+    intentionally left untouched.
+  */
+  --text-base: 0.9375rem; /* 15px (was 16px) */
+  --text-base--line-height: 1.65;
 }
 
 :root {

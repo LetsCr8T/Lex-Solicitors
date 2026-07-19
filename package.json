@@ -9,7 +9,9 @@
     "lint": "eslint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "gen:assets": "node scripts/generate-assets.mjs"
+    "gen:assets": "node scripts/generate-assets.mjs",
+    "gen:logo": "node scripts/process-logo.mjs",
+    "gen:favicons": "node scripts/generate-favicons.mjs"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -33,6 +35,7 @@
     "eslint-config-next": "16.2.10",
     "prettier": "^3.9.5",
     "prettier-plugin-tailwindcss": "^0.8.1",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

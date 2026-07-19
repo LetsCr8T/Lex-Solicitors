@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Cormorant_Garamond, Poppins } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { TopBar } from "@/components/layout/TopBar";
@@ -7,9 +7,10 @@ import { siteConfig } from "@/data/siteConfig";
 import "./globals.css";
 
 /** Body / UI typeface → exposed as the --font-sans CSS variable. */
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -75,7 +76,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${cormorant.variable}`}>
       <body className="flex min-h-dvh flex-col antialiased">
         <a
           href="#main"

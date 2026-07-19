@@ -98,7 +98,7 @@ export function buildLocalBusinessJsonLd(): LegalServiceJsonLd {
     email: siteConfig.email,
     telephone: `+${siteConfig.whatsapp}`,
     image: `${siteConfig.url}${siteConfig.ogImage}`,
-    logo: `${siteConfig.url}/images/logo.svg`,
+    logo: `${siteConfig.url}/images/lex-logo-dark.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress,
