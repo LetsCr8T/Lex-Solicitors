@@ -14,7 +14,7 @@ export function CapabilityList({ capabilities }: CapabilityListProps) {
           key={capability}
           className="flex items-start gap-2.5 text-sm text-body"
         >
-          <Check aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" />
+          <Check aria-hidden className="mt-0.5 size-4 shrink-0 text-primary" />
           <span>{capability}</span>
         </li>
       ))}

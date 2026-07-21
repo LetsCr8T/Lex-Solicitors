@@ -18,7 +18,7 @@ export function HeroActions({
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
         <CTAButton
           href={primaryCta.href}
-          variant="gold"
+          variant="primary"
           size="lg"
           className="w-full sm:w-auto"
         >
@@ -28,17 +28,17 @@ export function HeroActions({
           href={secondaryCta.href}
           variant="outline"
           size="lg"
-          className="w-full border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground sm:w-auto"
+          className="w-full sm:w-auto"
         >
           {secondaryCta.label}
         </CTAButton>
       </div>
 
-      <ul className="flex flex-wrap items-center gap-3 text-xs font-semibold tracking-[0.18em] text-primary-foreground/80 uppercase">
+      <ul className="flex flex-wrap items-center gap-3 text-xs font-semibold tracking-[0.18em] text-muted-foreground uppercase">
         {meta.map((item, i) => (
           <li key={item} className="flex items-center gap-3">
             {i > 0 ? (
-              <span aria-hidden className="size-1 rounded-full bg-accent" />
+              <span aria-hidden className="size-1 rounded-full bg-primary" />
             ) : null}
             <span>{item}</span>
           </li>

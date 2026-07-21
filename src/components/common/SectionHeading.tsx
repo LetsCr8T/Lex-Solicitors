@@ -41,9 +41,12 @@ export function SectionHeading({
             inverted ? "text-primary-foreground/80" : "text-muted-foreground",
           )}
         >
-          {/* Gold accent dash (decorative) keeps the brand pop while the label
-              text stays AA-readable on light and dark backgrounds. */}
-          <span aria-hidden className="h-px w-6 bg-accent" />
+          {/* Accent dash — navy on light sections, brand light-blue on dark
+              (inverted) sections, so it stays visible without any gold. */}
+          <span
+            aria-hidden
+            className={cn("h-px w-6", inverted ? "bg-haven" : "bg-primary")}
+          />
           {eyebrow}
         </span>
       ) : null}

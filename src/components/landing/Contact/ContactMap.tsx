@@ -25,7 +25,7 @@ export function ContactMap({ query }: ContactMapProps) {
         className="inline-flex items-center gap-1.5 self-start rounded-sm text-sm font-semibold text-ink underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none"
       >
         Get Directions
-        <ArrowUpRight aria-hidden className="size-4 text-accent" />
+        <ArrowUpRight aria-hidden className="size-4 text-primary" />
       </a>
     </div>
   );

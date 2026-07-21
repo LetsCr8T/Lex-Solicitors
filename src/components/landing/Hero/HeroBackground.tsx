@@ -1,10 +1,11 @@
 import { PillarMotif } from "@/components/common/PillarMotif";
 
 /**
- * Decorative hero backdrop over the ink (navy) section: a faint top sheen, two
- * soft brand-color glows in the corners, and a restrained pillar motif that
- * echoes the logo's columns. Purely decorative and low-opacity so it never
- * affects text contrast. Server Component.
+ * Light hero backdrop. The firm's navy is used only as ink and accent, never as
+ * a full background: here we lay a faint haven-blue wash in one corner (the only
+ * hint of a blue field, kept very low), a whisper of a fade into the next
+ * section, and a low-opacity pillar motif echoing the logo's columns. Purely
+ * decorative and cheap (no blur filters that would delay the hero LCP paint).
  */
 export function HeroBackground() {
   return (
@@ -12,13 +13,13 @@ export function HeroBackground() {
       aria-hidden
       className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
     >
-      {/* Top sheen + a soft gold glow, top-right — both cheap gradients (no
-          blur filters, which would delay the hero LCP paint). */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary-foreground/6 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-radial-[at_85%_0%] from-accent/15 to-transparent to-70%" />
-
-      {/* Pillar / column motif */}
-      <PillarMotif className="absolute inset-y-0 right-0 h-full w-2/3 text-primary-foreground/5 sm:w-1/2" />
+      {/* Soft haven-blue glow, top-right — the only touch of blue field. */}
+      <div className="absolute inset-0 bg-radial-[at_92%_0%] from-haven/25 to-transparent to-55%" />
+      {/* Gentle fade into the trust strip below. */}
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-b from-transparent to-muted/30" />
+      {/* Architectural pillar motif (echoes the logo), navy at a whisper.
+          Desktop only — on phones the plain light canvas reads cleaner. */}
+      <PillarMotif className="absolute inset-y-0 right-0 hidden h-full w-1/2 text-primary/5 sm:block" />
     </div>
   );
 }

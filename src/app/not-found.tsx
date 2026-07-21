@@ -12,7 +12,7 @@ export default function NotFound() {
       <Logo />
       <div className="flex flex-col items-center gap-3">
         <p className="font-display text-6xl font-semibold text-ink">404</p>
-        <span aria-hidden className="h-px w-10 bg-accent" />
+        <span aria-hidden className="h-px w-10 bg-primary" />
         <h1 className="font-display text-2xl font-semibold text-foreground">
           Page not found
         </h1>

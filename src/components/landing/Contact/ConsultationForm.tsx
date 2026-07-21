@@ -87,7 +87,7 @@ export function ConsultationForm({ defaultArea }: ConsultationFormProps) {
         aria-live="polite"
         className="flex flex-col items-start gap-3 rounded-2xl border border-border bg-muted p-8 focus:outline-none"
       >
-        <CheckCircle2 aria-hidden className="size-8 text-accent" />
+        <CheckCircle2 aria-hidden className="size-8 text-primary" />
         <h3 className="font-display text-xl font-semibold text-ink">
           Thank you — your request is on its way.
         </h3>
@@ -121,7 +121,7 @@ export function ConsultationForm({ defaultArea }: ConsultationFormProps) {
 
       <CTAButton
         type="submit"
-        variant="gold"
+        variant="primary"
         size="lg"
         disabled={submitting}
         className="w-full sm:w-auto sm:self-start"

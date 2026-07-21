@@ -12,14 +12,14 @@ export function ValueCard({ item, index }: ValueCardProps) {
     <div className="flex flex-col items-center gap-3 text-center">
       <span
         aria-hidden
-        className="font-display text-3xl font-semibold text-accent"
+        className="font-display text-3xl font-semibold text-haven"
       >
         {String(index).padStart(2, "0")}
       </span>
-      <h3 className="font-display text-2xl font-semibold text-primary-foreground">
+      <h3 className="font-display text-2xl font-semibold text-ink">
         {item.title}
       </h3>
-      <p className="max-w-xs text-base leading-relaxed text-primary-foreground/80">
+      <p className="max-w-xs text-base leading-relaxed text-muted-foreground">
         {item.description}
       </p>
     </div>

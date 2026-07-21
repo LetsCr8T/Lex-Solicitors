@@ -67,7 +67,7 @@ export function Disclosure({
       <ChevronDown
         aria-hidden
         className={cn(
-          "size-5 shrink-0 text-accent transition-transform duration-200 motion-reduce:transition-none",
+          "size-5 shrink-0 text-primary transition-transform duration-200 motion-reduce:transition-none",
           open && "rotate-180",
         )}
       />

@@ -31,7 +31,7 @@ export function ConsultationCta() {
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
             <CTAButton
               href={primaryCta.href}
-              variant="gold"
+              variant="light"
               size="lg"
               className="w-full sm:w-auto"
             >

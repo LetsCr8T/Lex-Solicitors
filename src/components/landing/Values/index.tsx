@@ -11,12 +11,11 @@ import { valuesContent } from "@/data/approachContent";
  */
 export function Values() {
   return (
-    <Section id="values" variant="ink">
+    <Section id="values" variant="default">
       <div className="flex flex-col items-center gap-12">
         <SectionHeading
           as="h2"
           align="center"
-          tone="inverted"
           eyebrow={valuesContent.eyebrow}
           title={valuesContent.title}
           className="max-w-2xl"
@@ -26,7 +25,7 @@ export function Values() {
             <ValueCard key={item.id} item={item} index={i + 1} />
           ))}
         </div>
-        <CTAButton href={valuesContent.cta.href} variant="gold" size="lg">
+        <CTAButton href={valuesContent.cta.href} variant="primary" size="lg">
           {valuesContent.cta.label}
         </CTAButton>
       </div>

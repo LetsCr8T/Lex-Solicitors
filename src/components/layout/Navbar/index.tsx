@@ -13,9 +13,10 @@ import { CONTACT_PATH } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 /**
- * Primary navigation (inside the fixed header). On the home route it is
- * transparent with light text over the ink hero, going solid on scroll. On
- * every other route it stays solid so it reads against a light background.
+ * Primary navigation (inside the fixed header). The hero is now a light canvas,
+ * so the bar always uses ink text and the navy logo; it is transparent at the
+ * top and turns to a translucent white with a hairline + soft shadow once the
+ * page scrolls (and on every inner route).
  */
 export function Navbar() {
   const pathname = usePathname();
@@ -27,19 +28,19 @@ export function Navbar() {
     <nav
       aria-label="Primary"
       className={cn(
-        "transition-colors duration-300",
+        "text-foreground transition-colors duration-300",
         solid
-          ? "border-b border-border bg-background/85 text-foreground shadow-sm backdrop-blur-md"
-          : "border-b border-transparent bg-transparent text-primary-foreground",
+          ? "border-b border-border bg-background/80 shadow-sm backdrop-blur-md"
+          : "border-b border-transparent bg-transparent",
       )}
     >
       <Container className="flex h-16 items-center justify-between gap-4 lg:h-20">
-        <Logo priority variant={solid ? "default" : "light"} />
+        <Logo priority variant="default" />
         <DesktopNav items={navItems} activeId={activeId} pathname={pathname} />
         <div className="flex items-center gap-2">
           <CTAButton
             href={CONTACT_PATH}
-            variant="gold"
+            variant="primary"
             size="sm"
             className="hidden sm:inline-flex"
           >

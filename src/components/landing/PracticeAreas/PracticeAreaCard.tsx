@@ -41,12 +41,12 @@ export function PracticeAreaCard({
   return (
     <article
       className={cn(
-        "flex flex-col gap-5 rounded-2xl border border-border bg-background p-6 transition-colors hover:border-accent/40 sm:p-8",
+        "flex flex-col gap-5 rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/30 sm:p-8",
         className,
       )}
     >
       <div className="flex items-center justify-between">
-        <span className="inline-flex size-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
+        <span className="inline-flex size-12 items-center justify-center rounded-xl bg-haven/40 text-primary">
           <Icon aria-hidden className="size-6" />
         </span>
         <span
@@ -86,7 +86,7 @@ export function PracticeAreaCard({
         <span>Discuss {service.title}</span>
         <ArrowRight
           aria-hidden
-          className="size-4 shrink-0 text-accent transition-transform group-hover/cta:translate-x-0.5"
+          className="size-4 shrink-0 text-primary transition-transform group-hover/cta:translate-x-0.5"
         />
       </Link>
     </article>

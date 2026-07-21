@@ -2,7 +2,7 @@ import type { NavItem } from "@/types";
 
 /** Primary site navigation — in-page anchors plus the dedicated Contact route. */
 export const navItems: NavItem[] = [
-  { label: "About", type: "anchor", href: "about" },
+  { label: "About Us", type: "anchor", href: "about" },
   { label: "Practice Areas", type: "anchor", href: "practice-areas" },
   { label: "Our Approach", type: "anchor", href: "approach" },
   { label: "Contact", type: "route", href: "/contact" },

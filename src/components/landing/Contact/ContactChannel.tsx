@@ -28,7 +28,7 @@ export function ContactChannel({ channel }: ContactChannelProps) {
 
   return (
     <div className="flex items-start gap-4">
-      <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-muted text-accent">
+      <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-haven/40 text-primary">
         <Icon aria-hidden className="size-5" />
       </span>
       <div className="flex flex-col gap-0.5">

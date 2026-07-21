@@ -31,7 +31,7 @@ export function MobileNav({ activeId, pathname }: MobileNavProps) {
     <Sheet>
       <SheetTrigger
         aria-label="Open menu"
-        className="-mr-2 inline-flex size-11 items-center justify-center rounded-md text-current transition-colors hover:text-accent focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none md:hidden"
+        className="-mr-2 inline-flex size-11 items-center justify-center rounded-md text-current transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none md:hidden"
       >
         <Menu aria-hidden className="size-6" />
       </SheetTrigger>
@@ -55,7 +55,7 @@ export function MobileNav({ activeId, pathname }: MobileNavProps) {
                       aria-current={active ? "page" : undefined}
                       className={cn(
                         "block rounded-md px-3 py-3 text-base font-medium transition-colors hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none",
-                        active ? "text-accent" : "text-foreground",
+                        active ? "text-primary" : "text-foreground",
                       )}
                     >
                       {item.label}
@@ -69,7 +69,7 @@ export function MobileNav({ activeId, pathname }: MobileNavProps) {
             <Link
               href={CONTACT_PATH}
               className={cn(
-                ctaVariants({ variant: "gold", size: "md" }),
+                ctaVariants({ variant: "primary", size: "md" }),
                 "mt-6 w-full",
               )}
             >

@@ -10,7 +10,7 @@ import { CONTACT_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 const linkClass =
-  "rounded-sm text-sm text-primary-foreground/70 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary";
+  "rounded-sm text-sm text-primary-foreground/70 transition-colors hover:text-haven focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-haven focus-visible:ring-offset-2 focus-visible:ring-offset-primary";
 
 /** Site footer: brand, quick links, practice areas, contact, and bottom bar. */
 export function Footer() {
@@ -55,7 +55,7 @@ export function Footer() {
             <span className="flex items-start gap-2.5">
               <MapPin
                 aria-hidden
-                className="mt-0.5 size-4 shrink-0 text-accent"
+                className="mt-0.5 size-4 shrink-0 text-haven"
               />
               <span>{siteConfig.address}</span>
             </span>
@@ -63,20 +63,20 @@ export function Footer() {
               href={CONTACT_LINKS.phone}
               className={cn(linkClass, "flex items-center gap-2.5")}
             >
-              <Phone aria-hidden className="size-4 shrink-0 text-accent" />
+              <Phone aria-hidden className="size-4 shrink-0 text-haven" />
               <span>{siteConfig.phoneDisplay}</span>
             </a>
             <a
               href={CONTACT_LINKS.email}
               className={cn(linkClass, "flex items-center gap-2.5")}
             >
-              <Mail aria-hidden className="size-4 shrink-0 text-accent" />
+              <Mail aria-hidden className="size-4 shrink-0 text-haven" />
               <span>{siteConfig.email}</span>
             </a>
             <span className="flex items-start gap-2.5">
               <Clock
                 aria-hidden
-                className="mt-0.5 size-4 shrink-0 text-accent"
+                className="mt-0.5 size-4 shrink-0 text-haven"
               />
               <span>{siteConfig.hours}</span>
             </span>

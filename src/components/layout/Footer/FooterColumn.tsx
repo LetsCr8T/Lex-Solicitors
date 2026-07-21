@@ -9,7 +9,7 @@ export interface FooterColumnProps {
 export function FooterColumn({ title, children }: FooterColumnProps) {
   return (
     <div className="flex flex-col gap-4">
-      <h3 className="text-sm font-semibold tracking-[0.14em] text-accent uppercase">
+      <h3 className="text-sm font-semibold tracking-[0.14em] text-haven uppercase">
         {title}
       </h3>
       {children}

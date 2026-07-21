@@ -18,13 +18,13 @@ export interface DifferentiatorCardProps {
   item: Differentiator;
 }
 
-/** Non-interactive differentiator card: gold icon slot, title, description. */
+/** Non-interactive differentiator card: light-blue icon slot, title, description. */
 export function DifferentiatorCard({ item }: DifferentiatorCardProps) {
   const Icon = iconMap[item.icon];
 
   return (
-    <div className="flex flex-col gap-4 rounded-2xl border border-border bg-background p-8 transition-colors hover:border-accent/40">
-      <span className="inline-flex size-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
+    <div className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-8 transition-colors hover:border-primary/30">
+      <span className="inline-flex size-12 items-center justify-center rounded-xl bg-haven/40 text-primary">
         <Icon aria-hidden className="size-6" />
       </span>
       <h3 className="font-display text-xl font-semibold text-ink">
