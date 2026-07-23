@@ -10,7 +10,7 @@ import { buildLocalBusinessJsonLd } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Contact ${siteConfig.name} — call or email to book a consultation with our Lagos law firm.`,
+  description: `Contact ${siteConfig.name} — call or email to book a consultation with our team.`,
   alternates: { canonical: "/contact" },
 };
 

@@ -8,7 +8,7 @@ export const siteConfig: SiteConfig = {
   name: "Lex Haven Solicitors",
   tagline: "Expertise. Integrity. Results.",
   description:
-    "Lex Haven Solicitors is a Lagos law firm for legal advisory, regulatory compliance, corporate governance, tax consulting and real estate advisory — practical, principled counsel.",
+    "Lex Haven Solicitors — advisory-led, commercially minded counsel across legal, regulatory, governance, tax and real estate matters, built to help businesses grow with confidence.",
   shortAbout:
     "A multidisciplinary advisory firm delivering legal advisory, regulatory compliance, corporate governance, tax consulting and real estate advisory to support sustainable business growth.",
   // Prefers the production URL from the environment (set on Vercel); falls back
