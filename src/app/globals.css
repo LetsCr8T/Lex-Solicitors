@@ -16,8 +16,8 @@
 @theme inline {
   /* Fonts (variables supplied by next/font on <html>) */
   --font-sans: var(--font-poppins);
-  --font-display: var(--font-cormorant);
-  --font-heading: var(--font-cormorant);
+  --font-display: var(--font-ariane);
+  --font-heading: var(--font-ariane);
 
   /* shadcn semantic tokens */
   --color-background: var(--background);

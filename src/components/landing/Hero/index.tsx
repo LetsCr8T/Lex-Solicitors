@@ -17,8 +17,8 @@ export function Hero() {
       <HeroBackground />
 
       <Container className="relative z-10 flex min-h-[88vh] flex-col justify-center gap-6 pt-32 pb-20 md:pt-40 md:pb-28">
-        <span className="inline-flex items-center gap-3 text-xs font-semibold tracking-[0.24em] text-primary uppercase">
-          <span aria-hidden className="h-px w-8 bg-primary/50" />
+        <span className="inline-flex items-center gap-3 text-xs font-semibold tracking-[0.18em] text-primary uppercase">
+          <span aria-hidden className="h-px w-8 shrink-0 bg-primary/50" />
           {heroContent.eyebrow}
         </span>
 

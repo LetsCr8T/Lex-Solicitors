@@ -1,12 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Poppins } from "next/font/google";
+import localFont from "next/font/local";
+import { Poppins } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { TopBar } from "@/components/layout/TopBar";
 import { siteConfig } from "@/data/siteConfig";
 import "./globals.css";
 
-/** Body / UI typeface → exposed as the --font-sans CSS variable. */
+/** Body / UI typeface → exposed as the --font-poppins CSS variable. */
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -14,11 +15,21 @@ const poppins = Poppins({
   display: "swap",
 });
 
-/** Display / heading typeface → exposed as the --font-cormorant CSS variable. */
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["500", "600"], // the only display weights used across the site
-  variable: "--font-cormorant",
+/** Display / heading typeface — the client's ArianeCoachella, self-hosted. */
+const ariane = localFont({
+  src: [
+    {
+      path: "../../public/fonts/ArianeCoachella-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/ArianeCoachella-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-ariane",
   display: "swap",
 });
 
@@ -78,7 +89,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${cormorant.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${ariane.variable}`}>
       <body className="flex min-h-dvh flex-col antialiased">
         <a
           href="#main"

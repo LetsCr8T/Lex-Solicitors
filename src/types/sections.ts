@@ -21,18 +21,11 @@ export interface HeroContent {
   meta: string[];
 }
 
-/** A labelled fact in the About definition list. */
-export interface AboutFact {
-  label: string;
-  value: string;
-}
-
 /** About section copy. */
 export interface AboutContent {
   eyebrow: string;
   title: string;
   paragraphs: string[];
-  facts: AboutFact[];
   cta: HeroCta;
 }
 
@@ -88,7 +81,6 @@ export interface ConsultationCtaContent {
   title: string;
   subtitle: string;
   primaryCta: HeroCta;
-  secondaryCta: HeroCta;
 }
 
 /** A single contact channel (phone, email, address, hours). */
@@ -109,6 +101,4 @@ export interface ContactContent {
   intro: string;
   channels: ContactChannel[];
   mapQuery: string;
-  /** Heading block above the consultation form. */
-  form: { eyebrow: string; title: string; subtitle: string };
 }

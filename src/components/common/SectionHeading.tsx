@@ -30,7 +30,9 @@ export function SectionHeading({
     <div
       className={cn(
         "flex flex-col gap-3",
-        centered && "items-center text-center",
+        // Headings read left-aligned on mobile for consistency; the "centered"
+        // sections only center from tablet up (where their layout calls for it).
+        centered && "md:items-center md:text-center",
         className,
       )}
     >
@@ -63,7 +65,7 @@ export function SectionHeading({
           className={cn(
             "max-w-2xl text-base leading-relaxed sm:text-lg",
             inverted ? "text-primary-foreground/80" : "text-muted-foreground",
-            centered && "mx-auto",
+            centered && "md:mx-auto",
           )}
         >
           {subtitle}

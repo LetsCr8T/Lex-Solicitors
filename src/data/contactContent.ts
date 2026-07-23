@@ -11,14 +11,13 @@ export const consultationCtaContent: ConsultationCtaContent = {
   subtitle:
     "Book a consultation and get clear, practical counsel from a team that treats your objectives as its own.",
   primaryCta: { label: "Book a Consultation", href: CONTACT_PATH },
-  secondaryCta: { label: "Email Us", href: CONTACT_LINKS.email },
 };
 
 export const contactContent: ContactContent = {
   eyebrow: "Contact Us",
   title: "Reach the firm.",
   intro:
-    "Call us during working hours, send an email, or request a consultation below — we respond promptly and will arrange a time to discuss your matter.",
+    "To book a consultation, call us during working hours or send us an email — we respond promptly and will arrange a time to discuss your matter.",
   channels: [
     {
       id: "phone",
@@ -50,10 +49,4 @@ export const contactContent: ContactContent = {
     },
   ],
   mapQuery,
-  form: {
-    eyebrow: "Request a consultation",
-    title: "Tell us about your matter.",
-    subtitle:
-      "Share a few details and we'll get back to you to arrange a time to talk.",
-  },
 };

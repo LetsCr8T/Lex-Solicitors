@@ -5,7 +5,7 @@ import sharp from "sharp";
 import { writeFileSync } from "node:fs";
 
 const NAVY = "#0e2038";
-const SRC = "public/images/lex-logo-light.png"; // trimmed lockup, pale blue
+const SRC = "public/images/Lex-Haven-Logo2.png"; // client's white lockup
 
 // 1) Find the monogram: scan columns for the first transparent gap that
 //    separates the "LH" mark from the wordmark, then crop + trim to it.

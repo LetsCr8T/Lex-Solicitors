@@ -11,7 +11,7 @@ export interface DesktopNavProps {
 /** Horizontal desktop nav list (hidden below `md`). */
 export function DesktopNav({ items, activeId, pathname }: DesktopNavProps) {
   return (
-    <ul className="hidden items-center gap-1 md:flex">
+    <ul className="hidden items-center gap-1 lg:flex">
       {items.map((item) => (
         <li key={item.href}>
           <NavLink

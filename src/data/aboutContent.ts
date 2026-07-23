@@ -1,5 +1,4 @@
 import type { AboutContent, WhyChooseUsContent } from "@/types";
-import { siteConfig } from "@/data/siteConfig";
 import { CONTACT_PATH } from "@/lib/constants";
 
 export const aboutContent: AboutContent = {
@@ -8,12 +7,6 @@ export const aboutContent: AboutContent = {
   paragraphs: [
     "Lex Haven Solicitors is a multidisciplinary advisory firm offering legal advisory, regulatory compliance, corporate governance, tax consulting, and real estate advisory services. We partner with clients to ensure legal and regulatory compliance, strengthen governance frameworks, and deliver commercially sound solutions that support sustainable business growth.",
     "Our approach is practical and results-driven. We combine deep technical knowledge with real-world commercial insight, so the counsel we provide doesn't just address the legal question in front of you — it moves your business forward with confidence.",
-  ],
-  // Hours comes from siteConfig; Location and Focus are curated.
-  facts: [
-    { label: "Location", value: "Maryland, Lagos" },
-    { label: "Focus", value: "Advisory-led, commercially minded" },
-    { label: "Hours", value: siteConfig.hours },
   ],
   cta: { label: "Discuss your needs", href: CONTACT_PATH },
 };

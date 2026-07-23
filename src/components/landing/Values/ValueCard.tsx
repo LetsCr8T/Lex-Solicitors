@@ -9,7 +9,7 @@ export interface ValueCardProps {
 /** A single value on the ink band: gold numeral, title, description (light text). */
 export function ValueCard({ item, index }: ValueCardProps) {
   return (
-    <div className="flex flex-col items-center gap-3 text-center">
+    <div className="flex flex-col gap-3 md:items-center md:text-center">
       <span
         aria-hidden
         className="font-display text-3xl font-semibold text-haven"

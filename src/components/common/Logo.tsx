@@ -3,9 +3,9 @@ import Link from "next/link";
 import { siteConfig } from "@/data/siteConfig";
 import { cn } from "@/lib/utils";
 
-// Intrinsic size of the trimmed logo lockup (scripts/process-logo.mjs).
-const LOGO_WIDTH = 758;
-const LOGO_HEIGHT = 181;
+// Intrinsic size of the client's logo lockup (public/images/Lex-Haven-Logo*.png).
+const LOGO_WIDTH = 1976;
+const LOGO_HEIGHT = 404;
 
 export interface LogoProps {
   className?: string;
@@ -22,8 +22,8 @@ export function Logo({
 }: LogoProps) {
   const src =
     variant === "light"
-      ? "/images/lex-logo-light.png"
-      : "/images/lex-logo-dark.png";
+      ? "/images/Lex-Haven-Logo2.png" // white lockup — for dark backgrounds
+      : "/images/Lex-Haven-Logo1.png"; // navy lockup — for light backgrounds
 
   return (
     <Link
@@ -39,7 +39,7 @@ export function Logo({
         width={LOGO_WIDTH}
         height={LOGO_HEIGHT}
         priority={priority}
-        className="h-9 w-auto"
+        className="h-10 w-auto lg:h-12"
       />
     </Link>
   );

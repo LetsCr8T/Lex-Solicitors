@@ -1,6 +1,7 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { Container } from "@/components/common/Container";
+import { CurrentYear } from "@/components/common/CurrentYear";
 import { Logo } from "@/components/common/Logo";
 import { FooterColumn } from "@/components/layout/Footer/FooterColumn";
 import { navHref, navItems } from "@/data/nav";
@@ -87,10 +88,19 @@ export function Footer() {
       <div className="border-t border-primary-foreground/10">
         <Container className="flex flex-col items-center justify-between gap-2 py-6 text-xs text-primary-foreground/60 sm:flex-row">
           <p>
-            © {year} {siteConfig.name}. All rights reserved.
+            © <CurrentYear initialYear={year} /> {siteConfig.name}. All rights
+            reserved.
           </p>
-          <p className="font-medium text-primary-foreground/80">
-            {siteConfig.tagline}
+          <p className="text-primary-foreground/70">
+            Website by{" "}
+            <a
+              href="https://letscr8t.vercel.app/"
+              target="_blank"
+              rel="noopener"
+              className="rounded-sm font-medium text-primary-foreground/90 underline-offset-4 transition-colors hover:text-haven hover:underline focus-visible:ring-2 focus-visible:ring-haven focus-visible:ring-offset-2 focus-visible:ring-offset-primary focus-visible:outline-none"
+            >
+              LetsCr8T
+            </a>
           </p>
         </Container>
       </div>

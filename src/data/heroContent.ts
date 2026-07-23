@@ -12,7 +12,7 @@ export const heroHeadlines = {
 } as const;
 
 export const heroContent: HeroContent = {
-  eyebrow: "Lex Haven Solicitors",
+  eyebrow: "Advisory-led, commercially minded",
   headline: heroHeadlines.primary,
   headlineAlternates: [heroHeadlines.alt1, heroHeadlines.alt2],
   subhead:

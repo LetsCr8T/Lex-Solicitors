@@ -1,7 +1,6 @@
 import { CTAButton } from "@/components/common/CTAButton";
 import { Section } from "@/components/common/Section";
 import { SectionHeading } from "@/components/common/SectionHeading";
-import { AboutFacts } from "@/components/landing/About/AboutFacts";
 import { AboutVisual } from "@/components/landing/About/AboutVisual";
 import { aboutContent } from "@/data/aboutContent";
 
@@ -21,7 +20,6 @@ export function About() {
               <p key={i}>{paragraph}</p>
             ))}
           </div>
-          <AboutFacts facts={aboutContent.facts} />
           <CTAButton
             href={aboutContent.cta.href}
             variant="primary"

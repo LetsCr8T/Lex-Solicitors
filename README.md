@@ -12,7 +12,7 @@ robots, and a PWA manifest.
 
 - **Next.js 16** (App Router) + **TypeScript** (strict)
 - **Tailwind CSS v4** (CSS-based theme) + **shadcn/ui** (Radix primitives)
-- **next/font** — Cormorant Garamond (display) + Inter (body)
+- **next/font** — ArianeCoachella (display, self-hosted) + Poppins (body)
 - **ESLint** (flat config) + **Prettier**
 
 ## Getting started
@@ -31,19 +31,10 @@ fallbacks apply); set them in production.
 | Variable               | Purpose                                                                                                                      |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | `NEXT_PUBLIC_SITE_URL` | Production site URL. Drives `metadataBase`, canonical, OG, sitemap, JSON-LD. Falls back to `https://lexhavensolicitors.com`. |
-| `ZOHO_*`, `CONTACT_*`  | Consultation-form email (Zoho SMTP). See below — **not wired yet**.                                                          |
 
-## Contact form email — not wired yet
-
-The `/contact` consultation form POSTs to `app/api/contact/route.ts`, which
-validates the input (zod + honeypot) and calls `sendConsultationEmail()` in
-`src/lib/email.ts`. **Email is not actually sent yet:** without the `ZOHO_*` /
-`CONTACT_*` env vars (and the transport implemented in `src/lib/email.ts`),
-submissions are validated and **logged server-side but not emailed** — the flow
-is demoable, and the form shows a success state. To go live, set the env vars
-and implement the transport in the single marked block in `src/lib/email.ts`
-(the route and form don't change). **Do not share the live form with real users
-until email is wired.**
+> The `/contact` page lists the firm's phone, email, office and hours (and a
+> map) — visitors book a consultation by calling or emailing directly. There is
+> no on-site form, so no mail/SMTP configuration is required.
 
 ## Scripts
 
