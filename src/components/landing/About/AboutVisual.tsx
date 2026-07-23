@@ -16,7 +16,7 @@ const taglineWords = siteConfig.tagline
 export function AboutVisual() {
   return (
     <div className="relative hidden min-h-96 overflow-hidden rounded-2xl border border-border bg-card p-10 shadow-sm lg:flex lg:flex-col lg:justify-center">
-      <PillarMotif className="absolute inset-y-0 right-0 h-full w-2/3 text-haven/70" />
+      <PillarMotif className="absolute inset-y-0 right-0 h-full w-2/3 text-primary/[0.06]" />
 
       <div className="relative flex flex-col gap-3">
         <span className="mb-3 inline-flex items-center gap-2.5 text-xs font-semibold tracking-[0.18em] text-muted-foreground uppercase">
