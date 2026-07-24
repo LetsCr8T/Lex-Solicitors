@@ -14,6 +14,7 @@ export const heroHeadlines = {
 export const heroContent: HeroContent = {
   eyebrow: "Advisory-led, commercially minded",
   headline: heroHeadlines.primary,
+  headlineAccent: "confidence.",
   headlineAlternates: [heroHeadlines.alt1, heroHeadlines.alt2],
   subhead:
     "A bespoke advisory firm delivering practical, results-driven counsel across legal, regulatory, governance, tax and real estate matters — support built to help your business grow sustainably.",

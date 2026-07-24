@@ -38,7 +38,7 @@ export function HeroActions({
         {meta.map((item, i) => (
           <li key={item} className="flex items-center gap-3">
             {i > 0 ? (
-              <span aria-hidden className="size-1 rounded-full bg-primary" />
+              <span aria-hidden className="size-1 rounded-full bg-gold" />
             ) : null}
             <span>{item}</span>
           </li>

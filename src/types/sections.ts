@@ -12,6 +12,11 @@ export interface HeroCta {
 export interface HeroContent {
   eyebrow: string;
   headline: string;
+  /**
+   * Trailing phrase of `headline` to set apart in gold italic. Must be an exact
+   * suffix of `headline`; ignored otherwise. Optional.
+   */
+  headlineAccent?: string;
   /** Alternate headlines kept for preview / selection. */
   headlineAlternates: string[];
   subhead: string;

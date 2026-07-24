@@ -18,6 +18,7 @@ const poppins = Poppins({
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["500", "600"], // the only display weights used across the site
+  style: ["normal", "italic"], // italic is used for the hero headline accent
   variable: "--font-cormorant",
   display: "swap",
 });
