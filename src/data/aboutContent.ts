@@ -3,7 +3,7 @@ import { CONTACT_PATH } from "@/lib/constants";
 
 export const aboutContent: AboutContent = {
   eyebrow: "About the Firm",
-  title: "A multidisciplinary advisory firm built for modern business.",
+  title: "A bespoke advisory firm built for modern business.",
   paragraphs: [
     "Lex Haven Solicitors is a multidisciplinary advisory firm offering legal advisory, regulatory compliance, corporate governance, tax consulting, and real estate advisory services. We partner with clients to ensure legal and regulatory compliance, strengthen governance frameworks, and deliver commercially sound solutions that support sustainable business growth.",
     "Our approach is practical and results-driven. We combine deep technical knowledge with real-world commercial insight, so the counsel we provide doesn't just address the legal question in front of you — it moves your business forward with confidence.",
@@ -18,7 +18,7 @@ export const whyChooseUsContent: WhyChooseUsContent = {
     {
       id: "multidisciplinary",
       icon: "layers",
-      title: "Multidisciplinary by design",
+      title: "Bespoke by design",
       description:
         "Legal, regulatory, governance, tax and real estate expertise under one roof, so you get joined-up advice instead of fragmented opinions.",
     },
