@@ -24,14 +24,14 @@ export function Hero() {
 
       <Container className="relative z-10 flex min-h-[88vh] flex-col justify-center gap-6 pt-32 pb-20 md:pt-40 md:pb-28">
         <span className="inline-flex items-center gap-3 text-xs font-semibold tracking-[0.18em] text-primary uppercase">
-          <span aria-hidden className="h-px w-10 shrink-0 bg-gold" />
+          <span aria-hidden className="h-px w-10 shrink-0 bg-primary/60" />
           {eyebrow}
         </span>
 
         <h1 className="max-w-4xl font-display text-4xl leading-[1.04] font-semibold text-balance text-ink sm:text-6xl lg:text-7xl">
           {headlineLead}
           {hasAccent ? (
-            <em className="text-ink italic underline decoration-gold decoration-2 underline-offset-[0.12em]">
+            <em className="text-ink italic underline decoration-haven decoration-[3px] underline-offset-[0.12em]">
               {headlineAccent}
             </em>
           ) : null}

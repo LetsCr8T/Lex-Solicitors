@@ -7,7 +7,7 @@ export interface HeroActionsProps {
   meta: string[];
 }
 
-/** Hero CTA row (gold + outline) plus the inline tagline meta line. */
+/** Hero CTA row (primary + outline) plus the inline tagline meta line. */
 export function HeroActions({
   primaryCta,
   secondaryCta,
@@ -38,7 +38,7 @@ export function HeroActions({
         {meta.map((item, i) => (
           <li key={item} className="flex items-center gap-3">
             {i > 0 ? (
-              <span aria-hidden className="size-1 rounded-full bg-gold" />
+              <span aria-hidden className="size-1 rounded-full bg-primary" />
             ) : null}
             <span>{item}</span>
           </li>

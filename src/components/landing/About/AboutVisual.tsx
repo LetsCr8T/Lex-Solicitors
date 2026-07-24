@@ -1,4 +1,4 @@
-import { PillarMotif } from "@/components/common/PillarMotif";
+import { ArcMotif } from "@/components/common/ArcMotif";
 import { siteConfig } from "@/data/siteConfig";
 
 // The firm tagline, split into its individual words for display.
@@ -9,14 +9,18 @@ const taglineWords = siteConfig.tagline
 
 /**
  * Light "brand promise" panel for the About section (desktop only). The firm
- * tagline in navy over a whisper of the pillar motif that echoes the logo's
- * columns — an elevated card on the light section, with no dark field and no
- * gold. Its own height fills the row beside the narrative. Server Component.
+ * tagline in navy over a whisper of the haven-blue arc motif — an elevated card
+ * on the light section, with no dark field and no gold. Its own height fills the
+ * row beside the narrative. Server Component.
  */
 export function AboutVisual() {
   return (
     <div className="relative hidden min-h-96 overflow-hidden rounded-2xl border border-border bg-card p-10 shadow-sm lg:flex lg:flex-col lg:justify-center">
-      <PillarMotif className="absolute inset-y-0 right-0 h-full w-2/3 text-primary/[0.06]" />
+      <ArcMotif
+        origin="bottom-right"
+        preserveAspectRatio="xMaxYMax slice"
+        className="absolute inset-0 h-full w-full text-haven/60"
+      />
 
       <div className="relative flex flex-col gap-3">
         <span className="mb-3 inline-flex items-center gap-2.5 text-xs font-semibold tracking-[0.18em] text-muted-foreground uppercase">
