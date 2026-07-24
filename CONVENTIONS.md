@@ -67,7 +67,7 @@ Use token classes — never raw hex.
 | canvas (bg)    | `#F8FAFC` | `bg-background` `bg-canvas`         |
 | body text      | `#475569` | `text-muted-foreground` `text-body` |
 
-Fonts: `font-display` = Cormorant Garamond, `font-sans` = Inter (default).
+Fonts: `font-display` = Cormorant Garamond, `font-sans` = Poppins (default).
 
 ## Tooling
 

@@ -12,7 +12,7 @@ robots, and a PWA manifest.
 
 - **Next.js 16** (App Router) + **TypeScript** (strict)
 - **Tailwind CSS v4** (CSS-based theme) + **shadcn/ui** (Radix primitives)
-- **next/font** — ArianeCoachella (display, self-hosted) + Poppins (body)
+- **next/font** — Cormorant Garamond (display) + Poppins (body)
 - **ESLint** (flat config) + **Prettier**
 
 ## Getting started
