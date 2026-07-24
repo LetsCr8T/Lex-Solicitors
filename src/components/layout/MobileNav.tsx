@@ -31,7 +31,7 @@ export function MobileNav({ activeId, pathname }: MobileNavProps) {
     <Sheet>
       <SheetTrigger
         aria-label="Open menu"
-        className="-mr-2 inline-flex size-11 items-center justify-center rounded-md text-current transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none lg:hidden"
+        className="-mr-2 inline-flex size-11 items-center justify-center rounded-md text-current transition-colors hover:text-haven focus-visible:ring-2 focus-visible:ring-haven focus-visible:ring-offset-2 focus-visible:ring-offset-primary focus-visible:outline-none lg:hidden"
       >
         <Menu aria-hidden className="size-6" />
       </SheetTrigger>

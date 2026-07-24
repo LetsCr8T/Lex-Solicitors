@@ -13,34 +13,31 @@ import { CONTACT_PATH } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 /**
- * Primary navigation (inside the fixed header). The hero is now a light canvas,
- * so the bar always uses ink text and the navy logo; it is transparent at the
- * top and turns to a translucent white with a hairline + soft shadow once the
- * page scrolls (and on every inner route).
+ * Primary navigation (inside the fixed header). The bar carries the firm's navy
+ * (matching the top utility bar) with the white logo and light links; the haven
+ * blue is the accent for hover/active states. A soft shadow appears once the
+ * page scrolls so content passing beneath it stays separated.
  */
 export function Navbar() {
   const pathname = usePathname();
   const scrolled = useScrolled(24);
   const activeId = useScrollSpy(navSectionIds);
-  const solid = scrolled || pathname !== "/";
 
   return (
     <nav
       aria-label="Primary"
       className={cn(
-        "text-foreground transition-colors duration-300",
-        solid
-          ? "border-b border-border bg-background/80 shadow-sm backdrop-blur-md"
-          : "border-b border-transparent bg-transparent",
+        "bg-primary text-primary-foreground transition-shadow duration-300",
+        scrolled ? "shadow-lg shadow-primary/25" : "shadow-none",
       )}
     >
       <Container className="flex h-16 items-center justify-between gap-4 lg:h-20">
-        <Logo priority variant="default" />
+        <Logo priority variant="light" />
         <DesktopNav items={navItems} activeId={activeId} pathname={pathname} />
         <div className="flex items-center gap-2">
           <CTAButton
             href={CONTACT_PATH}
-            variant="primary"
+            variant="light"
             size="sm"
             className="hidden sm:inline-flex"
           >
